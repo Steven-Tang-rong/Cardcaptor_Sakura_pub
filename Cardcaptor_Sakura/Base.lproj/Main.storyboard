@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rPA-S9-cU6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--占卜-->
+        <scene sceneID="RZ9-RH-jeP">
+            <objects>
+                <viewController id="kwM-qs-yRP" customClass="drawStrawsViewController" customModule="Cardcaptor_Sakura" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i8Y-fl-nyB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wmv-6w-XNC">
+                                <rect key="frame" x="30" y="74" width="354" height="719"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVk-3X-GpE">
+                                <rect key="frame" x="10" y="74" width="394" height="709"/>
+                                <connections>
+                                    <action selector="cardChange:" destination="kwM-qs-yRP" eventType="touchUpInside" id="0V2-AZ-Zyh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lVk-3X-GpE" firstAttribute="top" secondItem="ey5-vS-CXe" secondAttribute="top" constant="30" id="7tQ-TC-ZvH"/>
+                            <constraint firstItem="ey5-vS-CXe" firstAttribute="trailing" secondItem="wmv-6w-XNC" secondAttribute="trailing" constant="30" id="9FO-XZ-G39"/>
+                            <constraint firstItem="ey5-vS-CXe" firstAttribute="bottom" secondItem="wmv-6w-XNC" secondAttribute="bottom" constant="20" id="T7n-IE-c0F"/>
+                            <constraint firstItem="ey5-vS-CXe" firstAttribute="bottom" secondItem="lVk-3X-GpE" secondAttribute="bottom" constant="30" id="azy-iD-Hn5"/>
+                            <constraint firstItem="lVk-3X-GpE" firstAttribute="leading" secondItem="ey5-vS-CXe" secondAttribute="leading" constant="10" id="mhi-Iq-48t"/>
+                            <constraint firstItem="wmv-6w-XNC" firstAttribute="leading" secondItem="ey5-vS-CXe" secondAttribute="leading" constant="30" id="qsU-Gn-0k3"/>
+                            <constraint firstItem="ey5-vS-CXe" firstAttribute="trailing" secondItem="lVk-3X-GpE" secondAttribute="trailing" constant="10" id="ri8-4P-eWN"/>
+                            <constraint firstItem="wmv-6w-XNC" firstAttribute="top" secondItem="ey5-vS-CXe" secondAttribute="top" constant="30" id="tEk-5H-ty6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ey5-vS-CXe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="占卜" image="sun.max.fill" catalog="system" id="9U1-Ib-FJ9"/>
+                    <connections>
+                        <outlet property="cardBack" destination="lVk-3X-GpE" id="cmo-Fc-Y5U"/>
+                        <outlet property="clowCard" destination="wmv-6w-XNC" id="KuL-VP-Ao0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sw4-Cd-idF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1146.376811594203" y="-1420.3125"/>
+        </scene>
+        <!--解說-->
+        <scene sceneID="0fx-tN-v51">
+            <objects>
+                <tableViewController id="Vfs-DU-XOH" customClass="cardTableViewController" customModule="Cardcaptor_Sakura" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ttE-jU-dLF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="太陽" id="5MN-tI-FrG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="l8r-77-pgy">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l8r-77-pgy" id="ldm-mb-NRx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="e6r-Ae-gDK">
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e6r-Ae-gDK" id="Eie-Le-v3r">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TF1-lF-zaa">
+                                        <rect key="frame" x="0.0" y="115" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TF1-lF-zaa" id="Unz-z9-TPB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="月亮" id="i5L-zq-Vvz">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JGN-ZO-iLD">
+                                        <rect key="frame" x="0.0" y="214.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JGN-ZO-iLD" id="zJT-Nh-S4Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="h5w-LK-BHf">
+                                        <rect key="frame" x="0.0" y="258" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h5w-LK-BHf" id="VfT-MN-tuB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RW1-nD-eDL">
+                                        <rect key="frame" x="0.0" y="301.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RW1-nD-eDL" id="v7h-QD-NzC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Vfs-DU-XOH" id="NG2-LI-6WW"/>
+                            <outlet property="delegate" destination="Vfs-DU-XOH" id="i2b-GK-wYM"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="解說" image="moon.fill" catalog="system" id="6M6-vX-8hL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZs-DK-chI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1145" y="-696"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1OK-76-1iR">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rPA-S9-cU6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3tO-Zw-b4m">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.82584288269999995" blue="0.6095182536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.64611555790141917" blue="0.69134190697482323" alpha="0.69475064212328763" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kwM-qs-yRP" kind="relationship" relationship="viewControllers" id="iNS-Af-Oa0"/>
+                        <segue destination="Vfs-DU-XOH" kind="relationship" relationship="viewControllers" id="8k2-oL-Xbn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="741-zp-Ndv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2520" y="-992"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moon.fill" catalog="system" width="128" height="121"/>
+        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
+    </resources>
+</document>
