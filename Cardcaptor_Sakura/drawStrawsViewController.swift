@@ -14,7 +14,7 @@ class drawStrawsViewController: UIViewController {
     let cardsSet = [Int](1...52)
     var clowCards: [Int]!
     var item: Int! = 0
-    
+
     
     @IBOutlet weak var clowCard: UIImageView!
     
@@ -37,11 +37,21 @@ class drawStrawsViewController: UIViewController {
         
         if item == 1 {
             item = 1
+            
             clowCard.image = UIImage(named: "\(clowCards[item])")
+            cardBack.setImage(clowCard.image, for: .normal)
+            UIView.transition(with: cardBack, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            clowCard.isHidden = true
+        
             print("success 1")
         }else {
             item = 0
+            
+            clowCard.clipsToBounds = true
             clowCard.image = UIImage(named: "0")
+            cardBack.setImage(clowCard.image, for: .normal)
+            UIView.transition(with: cardBack, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+
             print("success 0")
         }
     }
