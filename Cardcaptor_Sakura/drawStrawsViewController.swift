@@ -30,6 +30,8 @@ class drawStrawsViewController: UIViewController {
 
         clowCards = cardsSet.shuffled()
         clowCard.image = UIImage(named: "0")
+
+   
     }
     
     func updateCards() {
@@ -39,10 +41,12 @@ class drawStrawsViewController: UIViewController {
             item = 1
             
             clowCard.image = UIImage(named: "\(clowCards[item])")
+            
             cardBack.setImage(clowCard.image, for: .normal)
             UIView.transition(with: cardBack, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             clowCard.isHidden = true
-        
+            
+
             print("success 1")
         }else {
             item = 0

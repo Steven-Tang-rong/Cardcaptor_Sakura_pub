@@ -12,6 +12,8 @@
 		2403C3B824C48F3F009DC596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2403C3B624C48F3F009DC596 /* Main.storyboard */; };
 		2403C3BA24C48F40009DC596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2403C3B924C48F40009DC596 /* Assets.xcassets */; };
 		2403C3BD24C48F40009DC596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2403C3BB24C48F40009DC596 /* LaunchScreen.storyboard */; };
+		24874C4124C7DD4300B65F5C /* sun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24874C3F24C7DD4300B65F5C /* sun.storyboard */; };
+		24874C4324C7DD6300B65F5C /* moon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24874C4224C7DD6300B65F5C /* moon.storyboard */; };
 		24BFBA7724C5304A00909D93 /* cardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFBA7624C5304A00909D93 /* cardTableViewController.swift */; };
 		24BFBA7924C530C900909D93 /* drawStrawsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFBA7824C530C900909D93 /* drawStrawsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,8 @@
 		2403C3B924C48F40009DC596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2403C3BC24C48F40009DC596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2403C3BE24C48F40009DC596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24874C4024C7DD4300B65F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Cardcaptor_Sakura/Base.lproj/sun.storyboard; sourceTree = "<group>"; };
+		24874C4224C7DD6300B65F5C /* moon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = moon.storyboard; sourceTree = "<group>"; };
 		24BFBA7624C5304A00909D93 /* cardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardTableViewController.swift; sourceTree = "<group>"; };
 		24BFBA7824C530C900909D93 /* drawStrawsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawStrawsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +65,8 @@
 				2403C3B024C48F3F009DC596 /* AppDelegate.swift */,
 				2403C3B224C48F3F009DC596 /* SceneDelegate.swift */,
 				2403C3B624C48F3F009DC596 /* Main.storyboard */,
+				24874C3F24C7DD4300B65F5C /* sun.storyboard */,
+				24874C4224C7DD6300B65F5C /* moon.storyboard */,
 				2403C3B924C48F40009DC596 /* Assets.xcassets */,
 				2403C3BB24C48F40009DC596 /* LaunchScreen.storyboard */,
 				2403C3BE24C48F40009DC596 /* Info.plist */,
@@ -129,8 +135,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2403C3BD24C48F40009DC596 /* LaunchScreen.storyboard in Resources */,
+				24874C4324C7DD6300B65F5C /* moon.storyboard in Resources */,
 				2403C3BA24C48F40009DC596 /* Assets.xcassets in Resources */,
 				2403C3B824C48F3F009DC596 /* Main.storyboard in Resources */,
+				24874C4124C7DD4300B65F5C /* sun.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +173,14 @@
 				2403C3BC24C48F40009DC596 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		24874C3F24C7DD4300B65F5C /* sun.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24874C4024C7DD4300B65F5C /* Base */,
+			);
+			name = sun.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
