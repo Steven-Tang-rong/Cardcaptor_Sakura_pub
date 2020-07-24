@@ -15,50 +15,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wmv-6w-XNC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="wmv-6w-XNC" customClass="cardImageView" customModule="Cardcaptor_Sakura" customModuleProvider="target">
                                 <rect key="frame" x="30" y="74" width="354" height="719"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVk-3X-GpE">
-                                <rect key="frame" x="10" y="74" width="394" height="709"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="cardChange:" destination="kwM-qs-yRP" eventType="touchUpInside" id="0V2-AZ-Zyh"/>
+                                    <outletCollection property="gestureRecognizers" destination="pgX-l7-d0p" appends="YES" id="bla-4i-5jw"/>
                                 </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="lVk-3X-GpE" firstAttribute="top" secondItem="ey5-vS-CXe" secondAttribute="top" constant="30" id="7tQ-TC-ZvH"/>
                             <constraint firstItem="ey5-vS-CXe" firstAttribute="trailing" secondItem="wmv-6w-XNC" secondAttribute="trailing" constant="30" id="9FO-XZ-G39"/>
                             <constraint firstItem="ey5-vS-CXe" firstAttribute="bottom" secondItem="wmv-6w-XNC" secondAttribute="bottom" constant="20" id="T7n-IE-c0F"/>
-                            <constraint firstItem="ey5-vS-CXe" firstAttribute="bottom" secondItem="lVk-3X-GpE" secondAttribute="bottom" constant="30" id="azy-iD-Hn5"/>
-                            <constraint firstItem="lVk-3X-GpE" firstAttribute="leading" secondItem="ey5-vS-CXe" secondAttribute="leading" constant="10" id="mhi-Iq-48t"/>
                             <constraint firstItem="wmv-6w-XNC" firstAttribute="leading" secondItem="ey5-vS-CXe" secondAttribute="leading" constant="30" id="qsU-Gn-0k3"/>
-                            <constraint firstItem="ey5-vS-CXe" firstAttribute="trailing" secondItem="lVk-3X-GpE" secondAttribute="trailing" constant="10" id="ri8-4P-eWN"/>
                             <constraint firstItem="wmv-6w-XNC" firstAttribute="top" secondItem="ey5-vS-CXe" secondAttribute="top" constant="30" id="tEk-5H-ty6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ey5-vS-CXe"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="占卜" image="sun.max.fill" catalog="system" id="9U1-Ib-FJ9"/>
+                    <tabBarItem key="tabBarItem" title="占卜" image="bookmark" catalog="system" id="9U1-Ib-FJ9"/>
                     <connections>
-                        <outlet property="cardBack" destination="lVk-3X-GpE" id="cmo-Fc-Y5U"/>
                         <outlet property="clowCard" destination="wmv-6w-XNC" id="KuL-VP-Ao0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sw4-Cd-idF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pgX-l7-d0p">
+                    <connections>
+                        <action selector="tap:" destination="kwM-qs-yRP" id="pWW-ao-oWu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1146.376811594203" y="-1420.3125"/>
         </scene>
-        <!--Table View Controller-->
+        <!--  -->
         <scene sceneID="0fx-tN-v51">
             <objects>
                 <tableViewController id="Vfs-DU-XOH" sceneMemberID="viewController">
@@ -83,9 +75,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="太陽屬性" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV0-04-Ice">
-                                                    <rect key="frame" x="140" y="124" width="134" height="40"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
-                                                    <color key="textColor" red="1" green="0.82584288269999995" blue="0.6095182536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="142.5" y="125" width="129.5" height="38.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                    <color key="textColor" red="0.99888318779999996" green="0.70597499610000003" blue="0.069672264159999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrF-T1-lDI">
@@ -111,13 +103,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月亮屬性" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsL-I7-qPN">
-                                                    <rect key="frame" x="146.5" y="110.5" width="121.5" height="36"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <rect key="frame" x="142.5" y="109.5" width="129.5" height="38.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                     <color key="textColor" red="0.21176470589999999" green="0.2274509804" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="月" translatesAutoresizingMaskIntoConstraints="NO" id="u8O-YJ-V8i">
-                                                    <rect key="frame" x="288" y="40" width="212" height="177"/>
+                                                    <rect key="frame" x="292" y="40" width="212" height="177"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rap-0V-nKT">
                                                     <rect key="frame" x="40" y="33" width="335" height="210"/>
@@ -144,7 +136,9 @@
                             <outlet property="delegate" destination="Vfs-DU-XOH" id="i2b-GK-wYM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Wcb-hF-QQD"/>
+                    <navigationItem key="navigationItem" title="  " id="Wcb-hF-QQD">
+                        <barButtonItem key="backBarButtonItem" title="  " id="5Ig-Um-aAb"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZs-DK-chI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,7 +152,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3tO-Zw-b4m">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="1" green="0.82584288269999995" blue="0.6095182536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="1" green="0.64611555790141917" blue="0.69134190697482323" alpha="0.69475064212328763" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
@@ -175,7 +168,7 @@
         <scene sceneID="slE-1V-RlJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gAJ-8y-OYE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="解說" image="moon.fill" catalog="system" id="6M6-vX-8hL"/>
+                    <tabBarItem key="tabBarItem" title="解說" image="book.fill" catalog="system" id="6M6-vX-8hL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n0s-a0-uaH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -212,8 +205,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="moon.fill" catalog="system" width="128" height="121"/>
-        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
+        <image name="0" width="340" height="761"/>
+        <image name="book.fill" catalog="system" width="128" height="100"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="日" width="202" height="360"/>
         <image name="月" width="212" height="208"/>
     </resources>

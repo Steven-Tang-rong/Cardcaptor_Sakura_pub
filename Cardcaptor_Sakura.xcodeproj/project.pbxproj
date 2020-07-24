@@ -14,7 +14,7 @@
 		2403C3BD24C48F40009DC596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2403C3BB24C48F40009DC596 /* LaunchScreen.storyboard */; };
 		24874C4124C7DD4300B65F5C /* sun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24874C3F24C7DD4300B65F5C /* sun.storyboard */; };
 		24874C4324C7DD6300B65F5C /* moon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24874C4224C7DD6300B65F5C /* moon.storyboard */; };
-		24BFBA7724C5304A00909D93 /* cardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFBA7624C5304A00909D93 /* cardTableViewController.swift */; };
+		24A34D6924C9A1E7005E6351 /* cardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A34D6824C9A1E7005E6351 /* cardImageView.swift */; };
 		24BFBA7924C530C900909D93 /* drawStrawsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BFBA7824C530C900909D93 /* drawStrawsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		2403C3BE24C48F40009DC596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24874C4024C7DD4300B65F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Cardcaptor_Sakura/Base.lproj/sun.storyboard; sourceTree = "<group>"; };
 		24874C4224C7DD6300B65F5C /* moon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = moon.storyboard; sourceTree = "<group>"; };
-		24BFBA7624C5304A00909D93 /* cardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardTableViewController.swift; sourceTree = "<group>"; };
+		24A34D6824C9A1E7005E6351 /* cardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardImageView.swift; sourceTree = "<group>"; };
 		24BFBA7824C530C900909D93 /* drawStrawsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawStrawsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +71,7 @@
 				2403C3BB24C48F40009DC596 /* LaunchScreen.storyboard */,
 				2403C3BE24C48F40009DC596 /* Info.plist */,
 				24BFBA7824C530C900909D93 /* drawStrawsViewController.swift */,
-				24BFBA7624C5304A00909D93 /* cardTableViewController.swift */,
+				24A34D6824C9A1E7005E6351 /* cardImageView.swift */,
 			);
 			path = Cardcaptor_Sakura;
 			sourceTree = "<group>";
@@ -150,8 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2403C3B124C48F3F009DC596 /* AppDelegate.swift in Sources */,
-				24BFBA7724C5304A00909D93 /* cardTableViewController.swift in Sources */,
 				24BFBA7924C530C900909D93 /* drawStrawsViewController.swift in Sources */,
+				24A34D6924C9A1E7005E6351 /* cardImageView.swift in Sources */,
 				2403C3B324C48F3F009DC596 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
